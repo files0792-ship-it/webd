@@ -5,6 +5,7 @@ const cors = require("cors");
 
 //2nd step:- create app
 const app = express();
+const port= 5000;
 
 /*
 3rd step:- apply middleware
