@@ -5,7 +5,7 @@ const cors = require("cors");
 
 //2nd step:- create app
 const app = express();
-
+sfasda
 /*
 3rd step:- apply middleware
 cors()-> attaches frontend to backend
