@@ -5,7 +5,7 @@ const cors = require("cors");
 
 //2nd step:- create app
 const app = express();
-sfasda
+
 /*
 3rd step:- apply middleware
 cors()-> attaches frontend to backend
@@ -13,7 +13,7 @@ express.json()->lets you read json from requests
 */
 app.use(cors());
 app.use(express.json());
-
+aadit
 //4th step:- connect db
 const db = new sqlite3.Database("database.db",(err) =>{
     if(err) console.log(err)
