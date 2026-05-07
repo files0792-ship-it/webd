@@ -5,9 +5,9 @@ import "./New.css"
 function App(){
 
   const[name,setName] = useState("");
-
+  const port = 9; 
   const [users,setUsers] = useState([]);
-asdawaw
+
   async function fetchUsers(){
     const response = await axios.get("http://localhost:5000/users");
     setUsers(response.data);

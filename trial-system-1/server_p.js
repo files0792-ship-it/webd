@@ -5,7 +5,6 @@ const cors = require("cors");
 
 //2nd step:- create app
 const app = express();
-const port= 5000;
 
 /*
 3rd step:- apply middleware
@@ -14,7 +13,7 @@ express.json()->lets you read json from requests
 */
 app.use(cors());
 app.use(express.json());
-
+aadit
 //4th step:- connect db
 const db = new sqlite3.Database("database.db",(err) =>{
     if(err) console.log(err)
@@ -76,4 +75,4 @@ app.delete("/users/:id",(req,res) =>{
 app.listen(5000, ()=>{
     console.log("Server connected to port 5000")
 });
-aadit
+
