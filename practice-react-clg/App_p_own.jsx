@@ -21,8 +21,7 @@ function App() {
     await axios.post("http://localhost:5000/expenses", { 
       title: title,
       amount: amount,
-      category: category  
-    
+      category: category
      });
 
       fetchExpenses();  
@@ -38,6 +37,12 @@ function App() {
 
   }
 
+  const totalExpenses = expenses.reduce(
+    (total, expense) =>
+      total + Number(expense.amount),
+    0
+  )
+
   return (
     <div>
       <h1>Expense Tracker</h1>
@@ -49,13 +54,14 @@ function App() {
       <div>
         {expenses.map((expense) => (
           <p key={expense.id}>
-            <p>{expense.title}</p>
-            <p>${expense.amount}</p>
-            <p>{expense.category}</p>
+            <p>Expense Title: {expense.title}</p>
+            <p>Expense Amount: ${expense.amount}</p>
+            <p>Expense Category: {expense.category}</p>
             <button onClick={() => deleteExpense(expense.id)}>Delete</button>
           </p>
         ))}
       </div>
+      <p>Total Expenses: ${totalExpenses.toFixed(2)}</p>
     </div>
   )
 }
